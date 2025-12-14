@@ -45,7 +45,7 @@ app.use(async (req, res, next) => {
   if (db.blocked[ip]) {
     return res.status(403).json({
       status: false,
-      message: "IP BLOCKED",
+      message: "YOUR IP BLOCKED",
       ip
     })
   }
@@ -97,7 +97,7 @@ app.get("/api/reactch", async (req, res) => {
   if (now - last < COOLDOWN) {
     return res.status(429).json({
       status:false,
-      message:"Cooldown aktif",
+      message:"HARAP JEDA 20 MENIT YA CUYY :)",
       retry_after: Math.ceil((COOLDOWN-(now-last))/1000)
     })
   }
@@ -116,10 +116,12 @@ app.get("/api/reactch", async (req, res) => {
     })
 
     res.json({
-      status:true,
+      status:true, 
+      creator: "DonzyTzy", 
+      message: "React Channel Successfully By Donzy", 
       ip,
       emoji,
-      remainingCoins:r.data.remainingCoins
+      remainingcoins:r.data.remainingCoins
     })
   } catch(e) {
     res.status(500).json({ status:false, error:e.message })
