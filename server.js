@@ -8,7 +8,7 @@ app.set("trust proxy", true)
 
 // ================= CONFIG =================
 const OWNER_APIKEY = "DonzyDevTzy"
-const USER_APIKEY = "donzfree"
+const USER_APIKEY = "/0xfDonzy3456"
 const USER_LIMIT = 25
 const COOLDOWN = 20 * 60 * 1000
 const MOVANEST_TOKEN = "movanest-keyLH0W2NBE99"
